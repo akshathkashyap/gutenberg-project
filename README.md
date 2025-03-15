@@ -5,7 +5,6 @@ Gutenberg Project is a social cataloging website that allows users to freely sea
 ## 🚀 Features
 
 -   📚 **Search** for books from a vast database
--   📝 **View Annotations** and **Read Reviews**
 -   ⚡ **Fast & Modern**: Built with Vite for an optimized experience
 -   🌐 **API-Driven**: Fetches book data dynamically
 
