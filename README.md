@@ -1,54 +1,64 @@
-# React + TypeScript + Vite
+# Gutenberg Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Gutenberg Project is a social cataloging website that allows users to freely search its database of books, annotations, and reviews. Built with **React**, **TypeScript**, and **Vite**, it provides a fast and interactive user experience.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   📚 **Search** for books from a vast database
+-   📝 **View Annotations** and **Read Reviews**
+-   ⚡ **Fast & Modern**: Built with Vite for an optimized experience
+-   🌐 **API-Driven**: Fetches book data dynamically
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+-   **Frontend**: React + TypeScript + Vite
+-   **Styling**: [e.g., Tailwind CSS, Styled Components, CSS Modules]
+-   **State Management**: [e.g., Redux, Zustand, Context API]
+-   **API**: [Mention the API source, e.g., Open Library API, Google Books API]
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🔧 Installation & Setup
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. **Clone the repository**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+    ```sh
+    git clone https://github.com/akshathkashyap/gutenberg-project.git
+    cd gutenberg-project
+    ```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+2. **Install dependencies**
+
+    ```sh
+    npm install
+    ```
+
+3. **Create a `.env` file** (if applicable) and add required environment variables:
+
+    ```env
+    VITE_API_URL=https://example.com/api
+    ```
+
+4. **Start the development server**
+
+    ```sh
+    npm run dev
+    ```
+
+5. **Build for production**
+
+    ```sh
+    npm run build
+    ```
+
+6. **Preview the production build**
+    ```sh
+    npm run preview
+    ```
+
+## 🤝 Contributing
+
+Contributions are welcome! To contribute:
+
+1. Fork the repository.
+2. Create a new branch (`feature/your-feature` or `fix/your-bug`).
+3. Commit your changes and push to your branch.
+4. Submit a Pull Request.
