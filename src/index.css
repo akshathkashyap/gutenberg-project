@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@font-face {
+	font-family: "Montserrat";
+	src: url("/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Montserrat";
+	src: url("/fonts/Montserrat/Montserrat-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+}
+
+@theme {
+	--font-sans: "Montserrat", sans-serif;
+	--color-gutenberg-gray-lt: #f0f0f6;
+	--color-gutenberg-gray-md: #a0a0a0;
+	--color-gutenberg-gray-dk: #333333;
+	--color-gutenberg-primary: #f8f7ff;
+	--color-gutenberg-accent: #5e56e7;
+}
+
+@layer base {
+	html {
+		@apply font-sans bg-gutenberg-primary;
+	}
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+}
+
+@keyframes fade-out {
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes slide-from-right {
+	from {
+		transform: translateX(30px);
+	}
+}
+
+@keyframes slide-to-left {
+	to {
+		transform: translateX(-30px);
+	}
+}
+
+::view-transition-old(root) {
+	animation: 90ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+		300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+}
+
+::view-transition-new(root) {
+	animation: 210ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
+		300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+}
