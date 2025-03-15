@@ -6,6 +6,7 @@ interface CategoryLinkProps {
 	iconSrc: string;
 }
 
+// displays a specific category link
 export default function CategoryLink({ name, iconSrc }: CategoryLinkProps) {
 	return (
 		<Link

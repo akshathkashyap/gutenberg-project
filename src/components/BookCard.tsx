@@ -5,6 +5,7 @@ interface BookCardProps {
 	book: Book;
 }
 
+// displays book and handles book errors in ErrorStack
 export default function BookCard({ book }: BookCardProps) {
 	const { addError } = useErrorStack();
 

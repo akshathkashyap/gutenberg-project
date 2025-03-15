@@ -12,6 +12,7 @@ interface InfiniteScrollerProps {
 	nextUrl: string | null;
 }
 
+// container for storing books in memory and displaying them infinitely
 export default function InfiniteScroller(props: InfiniteScrollerProps) {
 	const lastBookRef = useRef<HTMLSpanElement | null>(null);
 
@@ -74,6 +75,7 @@ export default function InfiniteScroller(props: InfiniteScrollerProps) {
 	}, [books]);
 
 	return (
+		// error stack provider for book errors
 		<ErrorStackProvider>
 			<InfiniteContainer>
 				{books.map((book, index: number) => {
@@ -98,6 +100,7 @@ export default function InfiniteScroller(props: InfiniteScrollerProps) {
 					  ))
 					: null}
 			</InfiniteContainer>
+			{/* adding error stack for book errors */}
 			<ErrorStack></ErrorStack>
 		</ErrorStackProvider>
 	);

@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import Categories from "./pages/Categories";
 import Category from "./pages/Category";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
 	return (
@@ -12,17 +13,14 @@ function App() {
 					element={<Navigate to='/categories' replace />}
 				></Route>
 
-				{/* All categories page */}
-				<Route path='/categories' element={<Categories />}></Route>
-
-				{/* Specific category page */}
-				<Route
-					path='/categories/:category'
-					element={<Category />}
-				></Route>
+				{/* Category routes */}
+				<Route path='/categories'>
+					<Route index element={<Categories />}></Route>
+					<Route path=':category' element={<Category />}></Route>
+				</Route>
 
 				{/* Default page-not-found */}
-				<Route path='*'></Route>
+				<Route path='*' element={<PageNotFound />}></Route>
 			</Routes>
 		</main>
 	);

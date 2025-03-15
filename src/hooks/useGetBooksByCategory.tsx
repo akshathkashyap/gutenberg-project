@@ -4,6 +4,7 @@ import { Book } from "../types";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
+// fetches books from a specific category; nextUrl can be used to fetch the next page
 export default function useGetBooksByCategory(category: string) {
 	const [isSearching, setIsSearching] = useState<boolean>(false);
 	const [books, setBooks] = useState<Book[]>([]);

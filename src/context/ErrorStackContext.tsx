@@ -15,6 +15,7 @@ const ErrorStackContext = createContext<ErrorStackContextType | undefined>(
 	undefined
 );
 
+// custom hook for ErrorStack to add and remove app errors from the stack
 export function useErrorStack() {
 	const context = useContext(ErrorStackContext);
 	if (!context) {
@@ -25,6 +26,7 @@ export function useErrorStack() {
 	return context;
 }
 
+// provider for ErrorStack to track and display app errors
 export default function ErrorStackProvider({
 	children,
 }: {

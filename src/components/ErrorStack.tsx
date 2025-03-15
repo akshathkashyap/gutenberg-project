@@ -1,6 +1,7 @@
 import { useErrorStack } from "../context/ErrorStackContext";
 import CancelIcon from "../assets/Cancel.svg";
 
+// display errors for users reference
 export default function ErrorStack() {
 	const { errorStack, removeError } = useErrorStack();
 

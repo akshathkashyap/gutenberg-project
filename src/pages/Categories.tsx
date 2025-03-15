@@ -8,6 +8,7 @@ import PhilosophyIcon from "../assets/Philosophy.svg";
 import HistoryIcon from "../assets/History.svg";
 import AdventureIcon from "../assets/Adventure.svg";
 
+// shows select number of categories that the user has the option to browse
 export default function Categories() {
 	return (
 		<div>

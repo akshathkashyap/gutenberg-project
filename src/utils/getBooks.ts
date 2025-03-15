@@ -1,5 +1,6 @@
 import { Book } from "../types";
 
+// converts API response to an array of Book objects
 export default function getBooks(results: any[]): Book[] {
 	return results.map((result) => {
 		const id: string = result.id.toString();

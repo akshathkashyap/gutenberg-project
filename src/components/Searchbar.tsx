@@ -10,6 +10,7 @@ interface SearchbarProps {
 	setNextSearchUrl: React.Dispatch<React.SetStateAction<string>>;
 }
 
+// helps user find books that match user defined string from a specific category
 export default function Searchbar({
 	setSearchResults,
 	setNextSearchUrl,

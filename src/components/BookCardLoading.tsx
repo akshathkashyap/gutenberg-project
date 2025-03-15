@@ -1,3 +1,4 @@
+// loading component to signify book loading
 export default function BookCardLoading() {
 	return (
 		<div className='flex flex-col justify-start items-start w-[130px] p-2 rounded-lg animate-pulse'>

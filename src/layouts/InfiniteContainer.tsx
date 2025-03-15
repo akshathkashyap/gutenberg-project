@@ -1,5 +1,6 @@
 import React from "react";
 
+// used to display books
 export default function InfiniteContainer({
 	children,
 }: {

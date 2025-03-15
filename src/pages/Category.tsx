@@ -9,6 +9,7 @@ import InfiniteContainer from "../layouts/InfiniteContainer";
 import { Book } from "../types";
 import BackIcon from "../assets/Back.svg";
 
+// category page displays books from selected category in the gutenberg project
 export default function Category() {
 	const [searchResults, setSearchResults] = useState<Book[]>([]);
 	const [nextSearchUrl, setNextSearchUrl] = useState<string>("");
@@ -54,6 +55,7 @@ export default function Category() {
 			<section className='p-4 md:py-12'>
 				<Centralize>
 					{isSearching ? (
+						// shows loading animation while the category books are being fetched
 						<InfiniteContainer>
 							{[...Array(32)].map((_, index: number) => (
 								<span key={`book_card_loading_${index}`}>
@@ -62,6 +64,7 @@ export default function Category() {
 							))}
 						</InfiniteContainer>
 					) : (
+						// shows search result books if searchResults array has items, else shows books fetched related to category
 						<InfiniteScroller
 							books={
 								searchResults.length
