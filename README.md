@@ -30,7 +30,7 @@ Gutenberg Project is a social cataloging website that allows users to freely sea
     npm install
     ```
 
-3. **Create a `.env` file** (if applicable) and add required environment variables:
+3. **Create a `.env` file** and add required environment variables:
 
     ```env
     VITE_API_URL=https://example.com/api
